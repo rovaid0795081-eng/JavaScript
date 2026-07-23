@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+
+  /* Smooth transition for properties changed via JS */
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+              background-color 0.5s ease;
+}
+
+/* Class toggled by JavaScript */
+.box.active {
+  background-color: #e74c3c;
+  transform: scale(1.4) rotate(180deg);
+}
